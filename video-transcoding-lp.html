@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		
+		<!-- Favicon Zone -->
+		<link rel="icon" href="favicon.ico" />
+		
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+		<title>Video Transcoding for VOD on AWS - Batchly</title>
+       
+        <script src="/js/jquery-1.11.3.js"></script>
+        <script>
+        $(function(){
+            $("#header").load("/header.html");
+            $("#footer").load("/footer.html");
+            
+        });
+        </script>
+        <!-- Google Analytics Code -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55273566-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        
+        <style>
+            .lp-logo {
+                margin-top: 20px;
+                margin-left: 100px;
+                height: 70px;
+            }
+            
+            .lp-hero h1 {
+                font-weight: lighter;
+                color: white;
+                font-size: 42px;
+                padding-left: 100px;
+            }
+            
+            .lp-hero ul li {
+                color: white;
+                margin-left: 80px;
+                list-style-type: square;
+                font-size: 20px;
+            }
+            
+            .lp-box {
+                position: absolute;
+                top: 80px;
+                right: 100px;
+                height: 350px;
+                width: 313px;
+                background-color: #ffffff;
+                border: 5px solid #00498e;
+                border-radius: 7px 7px 7px 7px;
+                opacity: 1;
+            }
+            
+            .lp-cust-testimonial {
+                background-color: #FBFBFB;
+                padding-top: 20px;
+                padding-left: 100px;
+                padding-right: 400px;
+                padding-bottom: 30px;
+            }
+            
+            
+            
+            .badge {
+                padding: 10px 0 0;
+                border: 1px solid #00498e;
+                background-color: #00498e;
+                border-radius: 50%;
+                font-size: 4.3rem;
+                font-weight: 100;
+                width: 78px;
+                height: 71px;
+                text-align: center;
+            }
+            
+            .content h3 {
+                color: #00498e;
+            }
+            
+            .lp-footer {
+                box-shadow: 0 10px 10px -10px #8c8b8b inset;
+                color:white;
+                font-size:14px;
+                margin-top:20px;
+                padding-top: 50px;
+                background-color: #00498e;
+            }
+        </style>   
+    </head>
+    
+    <body>
+    
+    <div id="header"></div>
+    
+    <div class="container-fluid">
+        <div class="row small-header lp-hero">
+            <h1>Batchly makes VOD Transcoding 80% cheaper.</h1>
+            <br>
+            <ul>
+                <li>Frictionless. Uses FFMpeg processor.</li>
+                <li>Automatic SPOT Utilization</li>
+                <li>SLA based computing</li>
+                <li>Secure. Runs Inside Your AWS account</li>
+            </ul>
+        </div>
+        
+        <div class="lp-box">
+            <h3 class="text-center">Request a Demo</h3>
+            <form class="form-horizontal mt-20 jotform-form" action="http://submit.jotform.me/submit/60953978219470/" method="post" name="form_60953978219470" id="60953978219470" accept-charset="utf-8">
+            <input type="hidden" name="formID" value="60953978219470" />
+            <fieldset style="padding: 20px;">
+                <div class="control-group">
+                  <label class="control-label" for="Email">Name:</label>
+                  <div class="controls">
+                    <input type="text" class="form-control form-textbox validate[required, Alphabetic]" data-type="input-textbox" id="input_1" name="q1_name" size="20" value="" style="height: 40px; border-radius: 5px; width: 250px;" required placeholder="Enter your name" />
+                  </div>
+                </div>
+                <br>
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="Email">Email:</label>
+                  <div class="controls">
+                    <input  type="email" class="form-control form-textbox validate[required, Email]" data-type="input-textbox" id="input_3" name="q3_email" size="20" value="" style="height: 40px; border-radius: 5px; width: 250px;" required placeholder="Enter a valid email address" />
+                  </div>
+                </div>
+
+                
+
+                <!-- Button -->
+                <div class="control-group">
+                  <label class="control-label" for="confirmsignup"></label>
+                  <div class="controls">
+                    <button id="input_2" name="confirmsignup" style="height: 50px; border-radius: 5px; width: 250px; margin-top: 20px; font-weight: bold; background-color: orange; color: white; font-size: 18px;" class="btn form-submit-button" type="submit">SCHEDULE DEMO</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+        </div>
+        
+    </div>
+    
+    <div class="container-fluid lp-cust-testimonial">
+        
+            <h3>"While comparing the costs with cloud transcoders, Batchly was 10X cheaper and 80% lower than AWS on-demand costs"</h3>
+            <h3><img src="img/indieflix-logo.png" style="max-height:40px;"> <strong>Brandon Woodward</strong>, Head of Product, Indieflix</h3>
+            
+        
+    </div>
+    <div class="container lp-3-steps text-center">
+        <h2>Get Started in 3 easy steps</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="badge">1</div>
+                <div class="content">
+                    <h3>Select FFMpeg Library (Or Bring Your Own Transcoder)</h3>
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <div class="badge">2</div>
+                <div class="content">
+                    <h3>Enter your S3 input and output locations</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="badge">3</div>
+                <div class="content">
+                    <h3>Schedule & Start Saving!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid lp-footer text-center">
+        <p>Copyright © 47Line Technologies Inc. All Rights Reserved</p>
+    </div> -->
+    <div id="footer"></div>
+        
+    </body>
+    
+</html>
