@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-08-30</lastmod>
+     <lastmod>2016-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>None/about/whybatchly/</loc>
-     <lastmod>2016-08-30</lastmod>
+     <lastmod>2016-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,19 +23,13 @@
         
     <url>
      <loc>None/user-guide/getting-started/</loc>
-     <lastmod>2016-08-30</lastmod>
+     <lastmod>2016-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/user-guide/creating-jobs/</loc>
-     <lastmod>2016-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/account-management/</loc>
-     <lastmod>2016-08-30</lastmod>
+     <loc>None/user-guide/user-management/</loc>
+     <lastmod>2016-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -44,30 +38,8 @@
     
         
     <url>
-     <loc>None/api/overview/</loc>
-     <lastmod>2016-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/api/createnewjob/</loc>
-     <lastmod>2016-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/usecases/ocr-processing/</loc>
-     <lastmod>2016-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/usecases/video-transcoding/</loc>
-     <lastmod>2016-08-30</lastmod>
+     <loc>None/iam-access/iam-access/</loc>
+     <lastmod>2016-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
