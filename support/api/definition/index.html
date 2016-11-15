@@ -124,30 +124,6 @@
                         
                             
 <li >
-    <a href="../../app-pages/spark/">Big Data Apps</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../app-pages/jmeter/">JMeter</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../app-pages/imagemagick/">ImageMagick</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../../app-pages/autoscaling/">Auto Scaling</a>
 </li>
 
@@ -167,6 +143,30 @@
                             
 <li >
     <a href="../../app-pages/customami/">Custom AMI</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/spark/">Big Data Apps</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/jmeter/">JMeter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/ffmpeg/">FFmpeg</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../app-pages/imagemagick/">ImageMagick</a>
 </li>
 
                         
@@ -266,9 +266,6 @@
         <li class="first-level "><a href="#runs-api">Runs API</a></li>
         
     
-        <li class="first-level "><a href="#projects-api">Projects API</a></li>
-        
-    
         <li class="first-level "><a href="#accounts-api">Accounts API</a></li>
         
     
@@ -280,7 +277,6 @@
 <ul>
 <li>Jobs</li>
 <li>Runs</li>
-<li>Projects</li>
 <li>Accounts</li>
 </ul>
 <h4 id="jobs-api">Jobs API</h4>
@@ -329,46 +325,6 @@
 <td>DELETE</td>
 <td>/api/Runs/{id}</td>
 <td>Delete the run details from your account</td>
-</tr>
-</tbody>
-</table>
-<h4 id="projects-api">Projects API</h4>
-<p>Projects define the boundary for your jobs to run in. Projects creates a sandbox environment associated with an AWS account, a cloud region within that AWS account and (optionally) associate a virtual private cloud with it.</p>
-<p>Projects’ calls allow you to create, edit or view projects associated with your Batchly account.</p>
-<p><strong>Actions Supported</strong></p>
-<table>
-<thead>
-<tr>
-<th>HTTP Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DELETE</td>
-<td>/api/Projects/{id}</td>
-<td>Delete the project with the given id</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Projects/{id}</td>
-<td>Get the details of the project for the given id</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/api/Projects/{id}</td>
-<td>Update the project details for the given id</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>/api/Projects/Add</td>
-<td>Create a new project</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/api/Projects</td>
-<td>Get all the projects associated with your batchly account</td>
 </tr>
 </tbody>
 </table>
