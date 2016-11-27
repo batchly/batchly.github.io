@@ -2,195 +2,239 @@
 <html>
 
 <head>
+  <title>Batchly Pricing Guide</title>
+  <link href="css/main.css" rel="styleSheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/modernizr.min.js"></script>
+    <script src="/js/jquery.js"></script>
 
-    <title>Pricing | Batchly</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-           <!-- Favicon Zone -->
-    <link rel="icon" href="favicon.ico" />
-           <!-- Style & bootstrap import -->
-    <!-- Style & bootstrap import -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel='stylesheet' href='/css/typicons.min.css' />
-    <script src="/js/jquery-1.11.3.js"></script>
     <script>
     $(function(){
-        $("#header").load("/header.html");
-        $("#footer").load("/footer.html");
-        $("#schedule-demo").load("/schedule-demo.html");
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#signup").load("signup-modal.html");
+
     });
     </script>
-    
-    <style>
-        .price-features ul li {
-            font-size: 16px;
-            list-style-type: none;
-			text-indent: -2em;
-        }
-    </style>
     <!-- Google Analytics Code -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-55273566-1', 'auto');
-      ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55273566-1', 'auto');
+    ga('send', 'pageview');
     </script>
-    <style>
-        .plan-padding {
-            box-sizing: border-box;
-            padding: 30px;
-        }
-        
-        .plan {
-            background-color: #eee;
-            padding: 25px 40px 40px;
-            box-sizing: border-box;
-            min-height: 650px;
-        }
-
-.plan h3 image {
-    vertical-align: middle;
-}
-        
-        .plan hr {
-            display: block;
-            height: 1px;
-            background-color: #999;
-            border: none;
-            box-shadow: none;
-            margin: 20px 0;
-            float: none;
-            clear: both;
-        }
-        
-        .logo-plan {
-            height:40px;
-        }
-        
-        .plan-feature {
-            margin-bottom: 15px;
-            display: block;
-            min-height: 65px;
-        }
-        
-        
-    </style>
 </head>
 
 <body>
-<div id="header"></div>
-
-<div class="container-fluid" style="position:relative;">
-    <div class="row">
-        <div class="small-header hero">
-            <div class="col-md-8 col-md-offset-2">
-                <h1><strong>Pricing:</strong> Batchly saves you money and takes a small portion for the value it brings</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+  <!--START: Header-->
+  <div id="header"></div>
+  <main>
+    <!--START: Blog-->
+    <section class="pricing-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="pricing">
+            <h2 class="pricing__heading">Pricing that scales with your Cloud</h2>
             <div class="row">
-                
-                <h3>Cost optimization is a fundamental goal of Batchly. Batchly always looks at ways to reduce your AWS costs without compromising on your business goals. Our pricing also reflects this philosophy. In short, Batchly pays for itself!</h3>
-            </div>
-            <br><br>
-            
-            <div class="row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="plan-padding">
-                        <div class="plan">
-                            <div class="text-center">
-                                <h3><img src="/img/batchly-logo.png" class="logo-plan" alt="Batchly logo"> <span> Self Service</span></h3>
-                            </div>
-                            <hr>
-                            <div class="plan-feature">
-                                <h4>PRICING</h4>
-                                <p>Subscription starts at <strong>$449/mo</strong></p>
-                                <p>25% on AWS savings (Run via Batchly)</p>
-                                
-                            </div>
-                            <div class="plan-feature">
-                                <h4>SUPPORT</h4>
-                                <p>Complete Onboarding Support</p>
-                                <p>Business Support (Email, Screenshare, Phone)</p>
-                            </div>
-                            <div class="plan-feature">
-                                <h4>FEATURES</h4>
-                                <p>Multi User Support</p>
-                                <p>API Access</p>
-                                <p>Job Scheduling</p>
-                                <p>2 Week Free Trial</p>
-                                <p>Access to prebuilt apps</p>
-                            </div>
-                            <div class="plan-feature">
-                                <h4>Get Started</h4>
-                                <a href="https://join.batchly.net/" class="btn btn-lg btn-info">Start Trial</a>
-                            </div>
-                        </div>
-                    </div>  
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h4 class="batchly-banner-block__text">Save up to 87% on your AWS bill. We optimally balance, size, and automate compute resource management over AWS On-Demand, Reserved, and Spot EC2 instances to achieve ROI impossible to ignore.</h4>
                 </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="plan-padding">
-                        <div class="plan">
-                            <div class="text-center">
-                                <h3><img src="/img/batchly-logo.png" class="logo-plan" alt="Batchly logo"> <span> Managed</span></h3>
-                                <hr>
-                            </div>
-                            <div class="plan-feature">
-                                <h4>PRICING</h4>
-                                <p>Pay for results (Contact sales for pricing info)</p>
-                                
-                            </div>
-                            <div class="plan-feature">
-                                <h4>SUPPORT</h4>
-                                <p>Complete Job Execution handled by Batchly</p>
-                                <p>Customized App Development for your needs</p>
-                                <p>Named Account Manager</p>
-                                <p>Periodic Reports</p>
-                                <p>Business Support (Email, Screenshare, Phone)</p>
-                            </div>
-                            <div class="plan-feature">
-                                <h4>Get Started</h4>
-                                <a href="#signup" role="button" class="btn btn-lg" data-toggle="modal" data-target=".bs-modal-sm" style="background-color:#ff6600;color: #fff;">Schedule A Demo</a>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+              <h4 class="pricing__info">Start with a 14 day trial with us.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="table-responsive pricing-table-container">
+      <!--START: Pricing Table-->
+      <section class="pricing-table">
+        <div class="container">
+          <div class="row">
+            <div class="pricing-container">
+              <div class="batchly-wrapper clearfix">
+                <div class="col-md-4 batchly-price batchly-price--feature hidden-xs">
+                  <h3 class="table-info">Features</h3>
                 </div>
-                
+                <div class="batchly-price col-xs-4 col-md-4 col-xs-offset-4 col-sm-offset-0">
+                  <div class="batchly-price__container">
+                    <h2 class="batchly-price__heading">Batchly Pro</h2>
+                    <ul class="batchly-price__list">
+                      <li class="batchly-price__item batchly-price__item--pricing">
+                        <h3 class="batchly-price__title"><span style="font-size:40px">20%</span> of savings</h3>
+
+                        <p class="batchly-price__info">Based on On-Demand EC2 Spend</p>
+                      </li>
+                    </ul><a href="http://join.batchly.net" class="batchly-price__link">Start trial</a>
+                  </div>
+                </div>
+                <div class="batchly-price col-xs-4 col-md-4">
+                  <div class="batchly-price__container">
+                    <h2 class="batchly-price__heading">Batchly Enterprise</h2>
+                    <ul class="batchly-price__list">
+                      <li class="batchly-price__item batchly-price__item--pricing">
+                        <h3 class="batchly-price__title"><span style="font-size:40px;">Contact Sales</span></h3>
+                          <p class="batchly-price__info">On On-Demand EC2 Spend</p>
+                      </li>
+                    </ul><a href="mailto:support@batch.ly?subject=I am interested in Batchly Enterprise" class="batchly-price__link">contact us</a>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing-block">
+                <table class="table table-striped table-pricing">
+                  <thead>
+                    <tr>
+                      <th>Multi User and Admins</th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <th>API Access</th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                      <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i></th>
+                    </tr>
+                    <tr>
+                      <th>Job Scheduling</th>
+                      <th class="price-tag"><i class="fa-check fa fa-check--blue"> </i>
+                      </th>
+                      <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Access to Pre-Built Apps</th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+                    <tr>
+                      <th>Payment Method</th>
+                      <th class="price-tag">Credit Card</th>
+                      <th class="price-tag">Credit Card / Invoice</th>
+                    </tr>
+                    <tr>
+                      <th>Product Onboarding</th>
+                      <th class="price-tag">Recorded Videos</th>
+                      <th class="price-tag">Personal 1-on-1 training</th>
+                    </tr>
+                    <tr>
+                      <th>Cloud Architect Consultation</th>
+                        <th class="price-tag"></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+                    <tr>
+                      <th>Designated Customer Success Manager (CSM)</th>
+                        <th class="price-tag"></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+                    <tr>
+                      <th>Annual Cloud Health Check</th>
+                        <th class="price-tag"></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+                    <tr>
+                      <th>Proactive, Regular Adoption, Best Practice Planning Strategy Sessions with CSM</th>
+                        <th class="price-tag"></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+                     <tr>
+                      <th>Custom Reports</th>
+                        <th class="price-tag"> </th>
+                        <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i></th>
+                    </tr>
+                    <tr>
+                      <th>14 day FREE TRIAL</th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                        <th class="price-tag"><i class="fa fa-check fa-check--blue"></i></th>
+                    </tr>
+
+                    <tr class="bg-transparent">
+                      <th class="table-info">Support</th>
+                      <th class="bg-white"></th>
+                      <th class="bg-white"></th>
+                    </tr>
+                    <tr>
+                      <th>Email Support</th>
+                        <th class="price-tag"><i class="fa-check fa-check--blue fa"></i></th>
+                        <th class="price-tag"><i class="fa-check fa-check--blue fa"></i></th>
+                    </tr>
+                    <tr>
+                      <th>Support Hours</th>
+                      <th class="price-tag">12x5</th>
+                      <th class="price-tag">24x7</th>
+                    </tr>
+                    <tr>
+                      <th>Initial Response SLA</th>
+                      <th class="price-tag">24 hours</th>
+                      <th class="price-tag">4 hours </th>
+                    </tr>
+                    <tr>
+                      <th>Slack Channel</th>
+                        <th class="price-tag"> <i class="fa fa-check fa-check--blue"></i> </th>
+                      <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>Slack Channel (Dedicated)</th>
+                        <th class="price-tag"></th>
+                      <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i> </th>
+                    </tr>
+
+                    <tr>
+                      <th>Custom Reports</th>
+                        <th class="price-tag"> </th>
+                        <th class="price-tag"> <i class="fa fa-check fa-check--blue"> </i></th>
+                    </tr>
+                    <tr class="bg-transparent">
+                      <th></th>
+                      <th class="price-tag bg-white"><a href="http://join.batchly.net" class="batchly-price__link">start trial</a>
+                      </th>
+                      <th class="price-tag bg-white"> <a href="mailto:support@batch.ly?subject=I am interested in Batchly Enterprise" class="batchly-price__link">contact us </a>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="clearfix"></div>
-        
-
-        <div class="row text-center" style="background-color: #FBFBFB; padding:20px;">
-           <h3>Prebuilt apps to get you started instantly!</h3>
-           <img src="/img/batchly-prebuiltapps-transparent.png" class="img-responsive center-block" />
+      </section>
+    </div>
+    <!--START: Pricing FAQ-->
+    <section class="batchly-faq-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="pricing-faq">
+            <h2 class="pricing-faq__heading">pricing faq</h2>
+            <div class="col-sm-6 col-md-6">
+              <h4 class="pricing-faq__ques">What payment methods to you accept?</h4>
+              <p class="pricing-faq__ans">What payment methods do you accept? We accept credit card (Visa, MasterCard, Maestro, American Express, Diners Club) and annual invoices.</p>
+              <h4 class="pricing-faq__ques">Can I delete my account at any time?</h4>
+              <p class="pricing-faq__ans">Yes. All data (test results, payment history andconfiguration) is owned by the user and can be deleted directly on the customer&apos;s request.</p>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <h4 class="pricing-faq__ques">What is included in the price?</h4>
+              <p class="pricing-faq__ans">Included in the price information such as features, support help and other pricing related details.</p>
+              <h4 class="pricing-faq__ques">Do I need a credit card for free trial?</h4>
+              <p class="pricing-faq__ans">No, you do not need a credit card. You can use Batchly for 14 days without trial and no credit card required.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="row text-center" id="customers">
-            <div class="col-md-8 col-sm-6 col-xs-12 cust-testimonial">
-                <p>"While comparing the costs, Batchly was 80% lower than AWS on-demand costs"</p>
-                <p><strong>Brandon Woodward</strong>, Head of Product, Indieflix</p>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul>
-                    <li><a href="/indieflix-casestudy.html"><img src="/img/indieflix-logo.png" alt="Indieflix Logo"></a></li>
-                </ul>
-            </div>
-    </div>
-    </div>
-    
-</div>
-
-<div id="footer"></div>
-<div id="schedule-demo"></div>
+      </div>
+    </section>
+  </main>
+  <!--START: Footer     -->
+  <div id="footer"></div>
+  <!--START: Scripts-->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/functions.js"></script>
+  <div id="signup"></div>
 </body>
+
 </html>

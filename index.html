@@ -1,261 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>AWS Cost Savings. Automated. | Batchly</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="Batchly is a cost optimization and spend management solution to manage your Hadoop, Stream, Batch, Load Testing, Log Processing and Transcoding workloads on AWS">
-    
-    <!-- Favicon Zone -->
-    <link rel="icon" href="favicon.ico" />
-    
-    <!-- Style & bootstrap import -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/typicons.min.css" />
-	
-    <script src="/js/jquery-1.11.3.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/batchly.js"></script>
+<html>
 
-    <script type="text/javascript">
+<head>
+  <title>Batchly</title>
+  <link href="css/main.css" rel="styleSheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <script src="js/modernizr.min.js"></script>
+  <script src="/js/jquery.js"></script>
+
+    <script>
     $(function(){
-		$("#footer").load("/footer.html");
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#signup").load("signup-modal.html");
+
     });
     </script>
     <!-- Google Analytics Code -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55273566-1', 'auto'); ga('send', 'pageview');
-    </script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55273566-1', 'auto');
+    ga('send', 'pageview');
+    </script>  
     <style>
-        #full-page-bg {
-            height:800px;
-            background: url(/img/awsbilling-bg.png) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            margin-top:-20px;
-        }
-        
-        #front-header {
-            padding-top: 30px;
-        }
-        #front-header a {
-            color:white;
-        }
-        #front-header li ul li a{
-            color:black;
-        }
-        .controller-menu {
-            background-color: rgba(0,0,0,0.8);
-            box-shadow: none;
-			margin-top: -10px;
-        }
-        
-        #header-message {
-            height:800px;
-            background: rgba(0,0,0,0.8);
-            padding-top: 100px;
-        }
-        
-        #header-message h1 {
-            font-size: 70px;
-            font-weight: 700;
-            color:rgba(91, 192, 222, 1);
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        
-        #header-message .sub-title {
-            font-weight: 100;
-            padding: 5px 10px 10px;
-            /*background-color: rgba(0, 73, 142, 0.8);*/
-            color: #fff;
-            font-size: 1.5em;
-        }
-        
-        #header-message a {
-            margin: 115px auto;
-        }
-        
-        #header-message .benefits {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-        }
-        
-        #header-message .benefits h3 {
-            color: #fff;
-            font-weight: 700;
-        }
-        
-        .btn-outline-inverse {
-            background-image: none;
-            outline: 0;
-            text-shadow: none;
-            background-color: #ff6600;
-            border-color: #ff6600;
-            color:white;
-        }
-        
-        .btn-outline-inverse:hover {
-            background-image: none;
-            outline: 0;
-            text-shadow: none;
-            background-color: #ff6600;
-            border-color: #ff6600;
-            color:white;
-        }
-        
-        .btn-xlg {
-            padding: 15px 30px;
-            font-size: 24px;
-            line-height: 1.333333;
-            border-radius: 6px;
-            font-weight: 700;
+        .greyscale {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
         }
     </style>
-    </head>
+</head>
+
 <body>
-<div id="full-page-bg">
-   <div id="front-header">
-    <!-- TOP AREA + MENU -->
-    <div class="row">
-        <div class="col-md-12 controller controller-menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2 col-sm-2 col-xs-8">
-                        <a href="index.html">
-                            <img src="/img/batchly-white-logo-with-caption.png" alt="Batchly - Intelligent AWS Provisioning" />
-                            </a>
-                    </div>
-                    <div class="col-xs-4 hidden-sm hidden-lg hidden-md">
-                        <a href="#"><img src="/img/hamburger.png" alt="" class="hamburger" /></a>
-                    </div>
-                    <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-2 col-sm-offset-2">
-                        <div class="batchly-menu">
-                            <ul>
-                                <li><a href="/aboutus.html">About</a></li>
-
-                                <li><a href="/index.html#features">Features</a></li>
-                                <li><a href="/pricing.html">Pricing</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solutions<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/map-reduce-lp.html">Hadoop EMR</a></li>
-                                        <li><a href="/video-transcoding-lp.html">Video Transcoding</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Case Studies<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/indieflix-casestudy.html">Video Transcoding</a></li>
-                                        <li><a href="/ocr-casestudy.html">OCR Processing</a></li>
-                                        <li><a href="/pdf-gen-casestudy.html">PDF Generation</a></li>
-                                        <li><a href="/hive-hadoop-casestudy.html">Big Data Processing</a></li>
-                                        <li><a href="/log-spark-casestudy.html">Stream Processing</a></li>
-                                        <li><a href="/pig-hadoop-casestudy.html">Pig on EMR Analysis</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="http://blog.batchly.net">Blog</a></li>
-                                <li><a class="btn btn-success" href="https://join.batchly.net/SignIn">Sign In</a></li>
-                            </ul>
-                        </div>
-                    </div>
+  <div id="header">
+  </div>
+  <!--START: Main-->
+  <main>
+    <section class="home-banner-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-push-6">
+            <div class="circle">
+              <div class="circle__outer">
+                <div class="circular circular--opacity circular--settings">
+                  <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 57.2 57.2" style="enable-background:new 0 0 57.2 57.2;" xml:space="preserve" class="circular__icon">
+                    <style type="text/css">
+                      //- .st0{opacity:0.6;fill:#DFE9EA;enable-background:new    ;}
+                    </style>
+                    <path d="M41.7,32.9V29c-0.1-0.8-0.8-1.5-1.6-1.5h-1.5c-0.3-1-0.7-2-1.2-2.9l1.1-1.1c0.6-0.6,0.6-1.5,0-2.1l-2.7-2.7  c-0.6-0.6-1.5-0.6-2.1,0l-1.1,1.1c-0.9-0.5-1.9-0.9-2.9-1.2v-1.5c0,0,0,0,0,0c0-0.8-0.7-1.5-1.5-1.5h-3.8c0,0,0,0,0,0  c-0.8,0-1.5,0.7-1.5,1.5v1.5c-1,0.3-2,0.7-2.9,1.2l-1.1-1.1c-0.6-0.6-1.5-0.6-2.1,0l-2.7,2.7c-0.6,0.6-0.6,1.5,0,2.1l1.1,1.1  c-0.5,0.9-0.9,1.9-1.2,2.9h-1.5c0,0-0.1,0-0.1,0c-0.8,0-1.4,0.7-1.4,1.5v3.9c0,0.8,0.7,1.5,1.5,1.5h1.5c0.3,1,0.7,2,1.2,2.9l-1,1.1  c-0.6,0.6-0.6,1.5,0,2.1l2.7,2.7c0.6,0.6,1.5,0.6,2.1,0l1.1-1.1c0.9,0.5,1.9,0.9,2.9,1.2v1.5c0,0.8,0.7,1.5,1.5,1.5h3.8  c0.8,0,1.5-0.7,1.5-1.5v-1.5c1-0.3,2-0.7,2.9-1.2l1.1,1.1c0.6,0.6,1.5,0.6,2.1,0l2.7-2.7c0.6-0.6,0.6-1.5,0-2.1l-1.1-1.1  c0.5-0.9,0.9-1.9,1.2-2.9h1.5C41,34.3,41.7,33.7,41.7,32.9L41.7,32.9z M33,31c0,3.8-3.1,6.8-6.9,6.8s-6.8-3.1-6.8-6.9  c0-3.8,3.1-6.8,6.9-6.8C30,24.1,33,27.2,33,31C33,31,33,31,33,31z"
+                    class="st0"></path>
+                  </svg>
                 </div>
+                <div class="circular circular--opacity circular--data">
+                  <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 52.3 52.3" style="enable-background:new 0 0 52.3 52.3;" xml:space="preserve" class="circular__icon">
+                    <style type="text/css">
+                      //- .st0{opacity:0.4;}
+                      //- .st1{fill:#DFE9EA;}
+                    </style>
+                    <g class="st0">
+                      <g>
+                        <path d="M14.7,27.1c-0.1-0.4-0.4-0.7-0.8-0.8c-0.1,0-0.2,0-0.3,0c-0.3,0-0.7,0.1-0.9,0.3c-0.3,0.3-0.4,0.8-0.2,1.2      c0.4,1.1,1,2.1,1.8,3c1.8,2.2,4.4,3.7,7.3,4.1l0-0.1c0.4,0,0.8,0.1,1.2,0.1c-0.3-0.8-0.4-1.6-0.5-2.4C18.8,32.3,16,30.2,14.7,27.1      z"
+                        class="st1"></path>
+                        <path d="M12.4,22.8l0.1,0c0.1,0,0.3,0,0.4-0.1l1-0.8l2.4-1.8l0.4-0.3c0.1-0.1,0.1-0.2,0.1-0.3c0-0.1-0.1-0.1-0.2-0.1      l-1.3-0.1l-0.2,0l-0.2,0c0.3-0.5,0.6-0.9,0.9-1.3c1.7-2.2,4.4-3.4,7.2-3.4c0.2,0,0.5,0,0.8,0c3.8,0.4,7,3.1,7.9,6.9l0.7,0      c0.6,0,1.2,0.1,1.8,0.2c-0.7-4.3-3.9-7.8-8.1-9c-1-0.3-2.1-0.5-3.2-0.5c-3,0-5.9,1.2-8.1,3.4c-0.8,0.8-1.5,1.7-2,2.7      c-0.1-0.1-0.4-0.3-1-0.8c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0.1-0.2,0.2c0,0,0,0,0,0.1l0.1,0.9l0.4,3.4l0,0.5      C12.1,22.6,12.2,22.8,12.4,22.8L12.4,22.8L12.4,22.8z"
+                        class="st1"></path>
+                        <path d="M32.5,23.3c-4.7-0.1-8.5,3.7-8.6,8.3c-0.1,4.7,3.7,8.5,8.3,8.6l0,0c4.7,0.1,8.5-3.7,8.6-8.3      C40.9,27.2,37.2,23.3,32.5,23.3z M31.9,30.1c0.3,0.2,0.6,0.3,0.9,0.5l0.3,0.2l0.5,0.3c0.4,0.2,0.7,0.4,1.1,0.6      c1,0.7,1.5,1.9,1.2,3.1c-0.2,1.2-1,2.1-2.2,2.3c-0.2,0-0.3,0.1-0.5,0.1l-0.1,0l0,1.4l-1.6,0l0-1.4c-2.2-0.6-3.2-1.7-2.9-3.4l0-0.2      l2.4,0l0,0.2l0,0.4c0,0.6,0.4,1,1,1l0.4,0c0.4,0,0.8-0.2,0.9-0.6c0.2-0.4,0-0.9-0.3-1.2c-0.2-0.1-0.5-0.3-0.7-0.4L32,32.7      l-0.5-0.3c-0.5-0.2-0.9-0.4-1.3-0.7c-0.8-0.6-1.2-1.6-1.1-2.6c0.1-1,0.7-2,1.6-2.4c0.3-0.1,0.6-0.2,0.9-0.3l0.3-0.1l0-1.4l1.7,0      l0,1.5c0.9,0.2,1.7,0.7,2.2,1.5c0.3,0.6,0.4,1.2,0.4,1.8l0,0.2l-2.4,0l-0.1-0.4c0-0.2,0-0.3-0.1-0.5c-0.1-0.4-0.5-0.7-0.9-0.6      c-0.4-0.1-0.8,0.1-0.9,0.5C31.5,29.4,31.6,29.9,31.9,30.1z"
+                        class="st1"></path>
+                        <path d="M25.2,24.5c0-0.1,0-0.2,0-0.4c0-0.7-0.4-1.4-1-1.8L24,17.7c0-0.6-0.4-1-1-1c-0.6,0-1,0.4-1,1l-0.3,4.6      c-0.6,0.4-1,1.1-1,1.8c0,0.1,0,0.2,0,0.3l-2.2,2.5c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.4,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.2l2.6-2.1      c0.2,0,0.3,0.1,0.5,0.1l0,0C24,26.3,25,25.6,25.2,24.5z"
+                        class="st1"></path>
+                      </g>
+                      <circle cx="22.9" cy="24.1" r="1" class="st1"></circle>
+                    </g>
+                  </svg>
+                </div>
+                <div class="circular circular--opacity circular--usb">
+                  <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 58.7 58.7" style="enable-background:new 0 0 58.7 58.7;" xml:space="preserve" class="circular__icon">
+                    <style type="text/css">
+                      .st0{opacity:0.4;fill:#DFE9EA;enable-background:new    ;}
+                    </style>
+                    <path d="M25.6,34.9v4.2c0,0.8,0.7,1.5,1.5,1.5h0h3c0.4-2.1,2.5-3.5,4.6-3.1c2.1,0.4,3.5,2.5,3.1,4.6s-2.5,3.5-4.6,3.1  c-1.4-0.3-2.5-1.3-2.9-2.6h-3.1c-1.9,0-3.5-1.6-3.5-3.5v-4.2c0-0.8-0.7-1.5-1.5-1.5h-3c-0.6,2.1-2.7,3.3-4.7,2.7  c-2.1-0.6-3.3-2.7-2.7-4.7c0.6-2.1,2.7-3.3,4.7-2.7c1.3,0.4,2.4,1.4,2.7,2.7h3.1c0.8,0,1.5-0.7,1.5-1.5v-4.2c0-1.9,1.6-3.5,3.5-3.5  h3.1c0.6-2,2.8-3.2,4.8-2.5c2,0.6,3.2,2.8,2.5,4.8c-0.6,2-2.8,3.2-4.8,2.5c-1.3-0.4-2.3-1.5-2.6-2.8h-3c-0.8,0-1.5,0.7-1.5,1.5v4.2  c0,0.9-0.4,1.9-1.1,2.5C25.3,33.1,25.6,34,25.6,34.9z"
+                    class="st0"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="circle__inner">
+                <div class="circular circular--cloud">
+                  <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="-265 264.4 28 32.6" style="enable-background:new -265 264.4 28 32.6;" xml:space="preserve" class="circular__icon circular__icon--bell">
+                    <style type="text/css">
+                      .st0{fill:#657CAD;}
+                    </style>
+                    <title>Vector Smart Object11</title>
+                    <path d="M-250.8,296c1.6-0.1,2.8-1.4,2.7-2.9c0,0,0-0.1,0-0.1h-5.9c0,1.7,1.3,3,3,3C-250.9,296-250.9,296-250.8,296z" class="st0"></path>
+                    <path d="M-238.7,289.2c-0.6-0.5-1.1-1.1-1.6-1.6c-0.5-0.4-0.8-1.1-0.8-1.8c0-2.4,0-4.8,0-7.3c0.1-4.4-2.7-8.3-6.9-9.6  c-0.5-0.1-0.9-0.6-0.8-1.1c0.1-1.2-0.8-2.3-2.1-2.4c-1.2-0.1-2.3,0.8-2.4,2.1c0,0.1,0,0.2,0,0.3c0.1,0.6-0.4,1.2-1,1.3  c-3.6,1.1-6.2,4.3-6.5,8.1c-0.3,2.2-0.3,4.3-0.1,6.5c0.4,2.2-0.6,4.3-2.4,5.6c-0.7,0.5-1,1.4-0.6,2.2h25.9  C-237.8,290.5-238,289.7-238.7,289.2z"
+                    class="st0"></path>
+                  </svg>
+                </div>
+                <div class="circular circular--dollar">
+                  <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="-267 264.2 23 33.8" style="enable-background:new -267 264.2 23 33.8;" xml:space="preserve" class="circular__icon circular__icon--lock">
+                    <style type="text/css">
+                      .st0{fill:#657CAD;}
+                    </style>
+                    <title>Vector Smart Object11</title>
+                    <path d="M-247.1,278v-4.3c0-2.2-0.9-4.4-2.5-6c-1.6-1.6-3.8-2.5-6-2.5c-4.7,0-8.4,3.8-8.4,8.4c0,0,0,0,0,0v4.3  c-1.4,0.3-2.3,1.6-2.3,3v12.8c0,1.7,1.4,3,3.1,3.1h15.4c1.7,0,3-1.4,3.1-3.1V281C-244.8,279.6-245.7,278.4-247.1,278z M-254.4,288  v2.3c0,0.6-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1V288c-0.6-0.4-1-1.1-1.1-1.9c0.1-1.2,1.1-2.1,2.3-2c1.1,0.1,1.9,0.9,2,2  C-253.3,286.9-253.7,287.6-254.4,288L-254.4,288z M-250.8,277.9h-9.5v-4.2c0-2.6,2.2-4.7,4.8-4.8c1.3,0,2.5,0.5,3.4,1.4  c0.9,0.9,1.4,2.1,1.4,3.4L-250.8,277.9L-250.8,277.9z"
+                    class="st0"></path>
+                  </svg>
+                </div>
+                <div class="circular circular--network">
+                  <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)-->
+                  <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="-262 263 33.4 35" style="enable-background:new -262 263 33.4 35;" xml:space="preserve" class="circular__icon circular__icon--hand">
+                    <style type="text/css">
+                      .st0{fill:#657CAD;}
+                    </style>
+                    <title>Vector Smart Object11</title>
+                    <path d="M-245.3,281.9c4.8,0,8.7-3.9,8.7-8.7c0-4.8-3.9-8.7-8.7-8.7c-4.8,0-8.7,3.9-8.7,8.7c0,0,0,0,0,0  C-254,278-250.1,281.9-245.3,281.9z M-244.1,274.5c-0.3-0.3-0.7-0.5-1.1-0.6c-0.4-0.1-0.8-0.3-1.2-0.5c-0.9-0.4-1.5-1.3-1.4-2.3  c0-0.6,0.2-1.2,0.6-1.7c0.5-0.5,1.1-0.7,1.7-0.8v-1.3h1v1.4c0.7,0.1,1.3,0.4,1.7,0.9c0.4,0.6,0.6,1.3,0.6,2h-1.5  c0-0.4-0.1-0.9-0.4-1.2c-0.2-0.3-0.6-0.5-0.9-0.4c-0.3,0-0.7,0.1-0.9,0.3c-0.2,0.2-0.4,0.6-0.3,0.9c0,0.3,0.1,0.6,0.3,0.9  c0.3,0.3,0.7,0.5,1.1,0.6c0.4,0.2,0.8,0.3,1.2,0.5c0.3,0.2,0.5,0.3,0.8,0.6c0.2,0.2,0.4,0.5,0.5,0.7c0.1,0.3,0.2,0.7,0.2,1  c0,0.6-0.2,1.2-0.6,1.6c-0.5,0.5-1.1,0.7-1.8,0.8v1.2h-1v-1.2c-0.7,0-1.4-0.4-1.9-0.9c-0.5-0.6-0.7-1.3-0.7-2h1.5  c0,0.4,0.1,0.9,0.4,1.2c0.3,0.3,0.7,0.5,1.1,0.4c0.4,0,0.8-0.1,1.1-0.3c0.2-0.2,0.4-0.6,0.4-0.9C-243.9,275.1-244,274.7-244.1,274.5  z"
+                    class="st0"></path>
+                    <path d="M-238.7,282.7l-5.7,2l1.6,0.6c0.4,0.1,0.8,0.3,1.3,0.4h0.2l5.6-2c-0.2-0.3-0.5-0.6-0.8-0.8  C-237.2,282.5-238,282.4-238.7,282.7z" class="st0"></path>
+                    <path d="M-238.8,288l7.2-2.5c-0.1-0.3-0.3-0.6-0.6-0.8c-0.7-0.5-1.5-0.6-2.3-0.3l-5.4,1.8  C-239.3,286.7-239,287.3-238.8,288z" class="st0"></path>
+                    <path d="M-229.5,287.8c-0.3-0.7-1-1.2-1.8-1.1c-0.3,0-0.7,0.1-1,0.2l-6.4,2.2l-0.1,0.3c-0.4,1.2-1.6,2-2.9,1.9  c-0.2,0-0.5,0-0.7-0.1c-1-0.1-2-0.2-3-0.2c-1.6,0-3.2-0.3-4.7-0.7c-0.1,0-0.2-0.1-0.3-0.2c-0.1-0.2,0-0.5,0.2-0.7  c0.1-0.1,0.3-0.1,0.4,0c1.4,0.5,2.9,0.7,4.4,0.7c1.1,0,2.1,0.1,3.1,0.3c1.4,0.2,2.4-0.3,2.6-1.3c0.1-1-0.6-1.9-1.6-2.1  c-1.6-0.4-3.2-1-4.8-1.8c-1.5-0.9-3.2-1.4-5-1.4c-1.5,0-3.3,0.9-5.5,2.1l-4.3,2.2l3.2,6c0.9-0.5,2-0.9,3-1.2c0.7,0,1.7,0.5,3.4,1.5  c1.9,1,4.2,2.3,5.8,2.3c1.9,0,5-1.5,12.6-5.3l2-1C-229.7,289.7-229.2,288.7-229.5,287.8z"
+                    class="st0"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="circle__animation">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 369.93 183" class="circle__animation__image">
+                  <defs>
+                    <style>
+                      .cls-1{isolation:isolate;}.cls-2{fill:#dfe9ea;}.cls-3{opacity:0.94;mix-blend-mode:overlay;}
+                    </style>
+                  </defs>
+                  <title>Banner</title>
+                  <g class="cls-1">
+                    <g id="Layer_1" data-name="Layer 1">
+                      <path id="_Path_" data-name="&lt;Path&gt;" d="M45.8,149.44l-15.2-8.86a15.63,15.63,0,0,1-7.76-13.5V74.77A15.63,15.63,0,0,1,27.6,63.54L49.86,42a15.63,15.63,0,0,1,10.88-4.41h47.58a15.63,15.63,0,0,1,9.62,3.31l22.2,17.34Z" class="cls-2"></path>
+                      <g id="_Group_" data-name="&lt;Group&gt;" class="cls-3">
+                        <image width="189" height="183" transform="translate(-13 2.45)" xlink:href="data:image/png;base64,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"></image>
+                      </g>
+                      <path d="M352.79,74.23c-14-15.19-59-63.76-63-65.37S222,8.4,197.35,8.76a15.62,15.62,0,0,0-10.63,4.39L45.8,149.44l46.89,29.2A15.63,15.63,0,0,0,101,181H318.69a15.63,15.63,0,0,0,11-4.54L352.31,154a15.63,15.63,0,0,0,4.62-11.1V84.83A15.63,15.63,0,0,0,352.79,74.23ZM278.73,112.9a0.7,0.7,0,0,1-1.19.49L263.45,99.24l-30.82,30.82a4.91,4.91,0,0,1-6.94,0l-14-14-24.34,24.34a4.91,4.91,0,0,1-6.94-6.94l27.81-27.81a4.91,4.91,0,0,1,6.94,0l14,14,27.36-27.36L243,78.74a0.7,0.7,0,0,1,.48-1.19c6.23-.06,28.53-1.62,35-1.6a1.8,1.8,0,0,1,1.8,1.81Z"
+                      class="cls-2"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
             </div>
+          </div>
+          <div class="col-sm-6 col-sm-pull-6">
+            <div class="home-banner-carousel">
+              <div class="home-banner-carousel-item">
+                <h2 class="home-banner-carousel-item__heading">Achieve On-Demand AWS Availability at Spot Prices</h2>
+                <p class="home-banner-carousel-item__info">Fully automated dynamic compute resource balancing and management for AWS</p>
+              </div>
+            </div>
+            <div class="home-banner-buttons"><a href="http://join.batchly.net" data-text="Free Trial" class="button-hover">Free Trial</a><a href="why-batchly.html" data-text="why batchly" class="button-hover button--active">Why Batchly</a>
+            </div>
+          </div>
         </div>
-    </div>
-    </div>
-    <div id="header-message" class="text-center">
-        <h1>REDUCE YOUR AWS COSTS BY UPTO 90%</h1>
-         <span class="sub-title">No code change. No complicated recommendations to act upon.</span>
-         <br />
-        <a href="https://join.batchly.net/" class="btn btn-xlg btn-outline-inverse btn-batchly-cta">START FREE TRIAL</a>
-        
-        <div class="container-fluid benefits">
+      </div>
+    </section>
+      <section >
+          <div class="container-fluid" style="margin-top:10px;">
+            <div class="row">
+                  <a href="aws-reinvent.html"><img class="img-responsive" src="images/batchly-reinvent-banner.jpg"></a>
+            </div>
+          </div>
+      </section>
+    <!--START: Clients
+    <section class="our-clients">
+      <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Right Instance for Right Job</h3>
-                <p>Utilizes the right instances via our instance smart sizing solution</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Automated Spot Management</h3>
-                <p>We take the complexity out of managing spot instances</p>
-            </div>
-            <div class="col-sm-4">
-                <h3>Familiar Applications</h3>
-                <p>Get started with our pre-built apps for all your common workloads in AWS</p>
-            </div>
-            </div>
-    </div>
-    </div>
-</div>
-
-<div class="container-fluid" style="background-color: #FBFBFB;">
-    <div class="row text-center" id="customers">
-         <h3>Join the businesses that use Batchly regularly to save on AWS costs</h3>
-        <div class="col-md-8 col-sm-6 col-xs-12 cust-testimonial">
-            <p>"While comparing the costs, Batchly was 80% lower than AWS on-demand costs"</p>
-            <p><strong>Brandon Woodward</strong>, Head of Product, Indieflix</p>
+          <ul class="client-list">
+            <li class="client-list__item">
+              <a href="#" class="client-list__link">
+                <img src="images/press-link-1.png" alt="client-logo" class="img-responsive">
+              </a>
+            </li>
+            <li class="client-list__item">
+              <a href="#" class="client-list__link">
+                <img src="images/press-link-2.png" alt="client-logo" class="img-responsive">
+              </a>
+            </li>
+            <li class="client-list__item">
+              <a href="#" class="client-list__link">
+                <img src="images/press-link-3.png" alt="client-logo" class="img-responsive">
+              </a>
+            </li>
+            <li class="client-list__item">
+              <a href="#" class="client-list__link">
+                <img src="images/press-link-4.png" alt="client-logo" class="img-responsive">
+              </a>
+            </li>
+            <li class="client-list__item">
+              <a href="#" class="client-list__link">
+                <img src="images/press-link-5.png" alt="client-logo" class="img-responsive">
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul>
-                <li><a href="indieflix-casestudy.html"><img src="img/indieflix-logo.png" alt="Indieflix Logo"></a></li>
+      </div>
+    </section> -->
+    <!-- START: Dashboad -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-heading text-center">Batchly Dashboard</h2>
+                <div class="testimonial-review container--test">
+                    <img class="img-responsive" src="images/batchly-dashboard.jpg" />
+                </div>
+                
+            </div>
+        </div>
+    </section>  
+    <!--START: Features -->
+    <section class="features" id="features-section">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center features-title"><span class="features-title__text">Features</span><span class="features-title__subtext">the batchly advantage</span></h2>
+          <div class="batchly-features col-md-8 col-md-offset-2 clearfix">
+            <div data-aos="zoom-in" data-aos-offset="0" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__image col-sm-4 col-md-5">
+              <div class="batchly-features__red">
+                <img src="images/features/app-store.svg" class="batchly-features__innerimage">
+              </div>
+            </div>
+            <div data-aos="fade-right" data-aos-offset="15" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__content col-sm-8 col-md-10 col-md-offset-1">
+              <h3 class="batchly-features__title">app store</h3>
+              <p class="batchly-features__info">The app store enables you to use apps that are already running on your AWS account without any coding or re-engineering. <b>Just plug and run.</b></p>
+            </div>
+          </div>
+          <div class="batchly-features col-md-8 col-md-offset-2 clearfix">
+            <div data-aos="zoom-in" data-aos-offset="0" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__image col-sm-3 col-md-6 col-sm-push-9">
+              <div class="batchly-features__red batchly-features__blue">
+                <img src="images/features/rest-api.svg" class="batchly-features__innerimage">
+              </div>
+            </div>
+            <div data-aos="fade-left" data-aos-offset="130" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__content col-sm-8 col-md-10 col-sm-pull-2 col-md-pull-4">
+              <h3 class="batchly-features__title">Rest API</h3>
+              <p class="batchly-features__info">Easily integrate Batchly within your complex enterprise workflows using Batchly&apos;s comprehensive <b>REST APIs and Webhooks.</b></p>
+            </div>
+          </div>
+          <div class="batchly-features col-md-8 col-md-offset-2 clearfix">
+            <div data-aos="zoom-in" data-aos-offset="0" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__image col-sm-4 col-md-5">
+              <div class="batchly-features__red">
+                <img src="images/features/batchly-secure.svg" class="batchly-features__innerimage">
+              </div>
+            </div>
+            <div data-aos="fade-right" data-aos-offset="130" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__content col-sm-8 col-md-10 col-md-offset-1">
+              <h3 class="batchly-features__title">secure</h3>
+              <p class="batchly-features__info">Batchly runs within your AWS account and uses restricted IAM role access to manage your AWS infrastructure. <b>You don&apos;t have to share your AWS Access and Secret keys.</b></p>
+            </div>
+          </div>
+          <div class="batchly-features col-md-8 col-md-offset-2 clearfix">
+            <div data-aos="zoom-in" data-aos-offset="0" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__image col-sm-3 col-sm-offset-1 col-md-6 col-sm-push-8">
+              <div class="batchly-features__red batchly-features__blue">
+                <img src="images/features/dynamic.svg" class="batchly-features__innerimage">
+              </div>
+            </div>
+            <div data-aos="fade-left" data-aos-offset="130" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__content col-sm-8 col-sm-offset-1 col-md-10 col-sm-pull-4 col-md-pull-5">
+              <h3 class="batchly-features__title">Dynamic instance smart sizing</h3>
+              <p class="batchly-features__info">Batchly&apos;s advanced algorithm dynamically and continuously makes the best instance choices <b>optimized for performance, availability and cost</b> without intervention.</p>
+            </div>
+          </div>
+          <div class="batchly-features col-md-8 col-md-offset-2 clearfix">
+            <div data-aos="zoom-in" data-aos-offset="0" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__image col-sm-4 col-md-5">
+              <div class="batchly-features__red">
+                <img src="images/features/notification.svg" class="batchly-features__innerimage">
+              </div>
+            </div>
+            <div data-aos="fade-right" data-aos-offset="130" data-aos-easing="ease-in-cubic" data-aos-duration="600" class="batchly-features__content col-sm-8 col-md-10 col-md-offset-1">
+              <h3 class="batchly-features__title">Smart notifications</h3>
+              <p class="batchly-features__info">Batchly keeps you updated on the workloads you are running on your AWS accounts and sends you emails/webhook notifications to take immediate action.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--START: Testimonial-->
+    <!--START: Testimonial-->
+	<section class="testimonial">
+      <div class="container">
+        <div class="row">
+          <h3 class="section-heading text-center">testimonials</h3>
+          <div class="testimonial-review container--test">
+            <ul id="testimonial-slider" class="testimonial-slider">
+              <li class="item active">
+                <div class="col-md-4 col-sm-6 text-center">
+                  <img src="images/indieflix-square.png" class="testimonial-slider__client img-responsive img-circle">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                  <div class="client"><span class="client__quote fa fa-quote-left"></span>
+                    <img src="images/client-01-logo.png" class="client__logo">
+                    <h2 class="client__name">Brandon Woodward</h2>
+                    <h3 class="client__office">Head of product, Indieflix</h3>
+                    <p class="client__description">While comparing the costs, Batchly was 80% lower than AWS on-demand costs</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="col-md-4 col-sm-6 text-center">
+                  <img src="images/chandra-gupta.jpg" class="testimonial-slider__client img-responsive img-circle">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                  <div class="client"><span class="client__quote fa fa-quote-left"></span>
+                    <img src="images/client-02-logo.png" class="client__logo">
+                    <h2 class="client__name">Chandra Gupta</h2>
+                    <h3 class="client__office">CTO, Reliance NLAM</h3>
+                    <p class="client__description">Batchly is a great choice for companies considering to take advantage of the cloud while not having to deal with the overhead to handle the complexities</p>
+                  </div>
+                </div>
+              </li>
             </ul>
+          </div>
+          <div class="clients">
+            <div class="clients__unit">
+              <img src="images/client-02.png" class="clients__logo img-responsive">
+              <h2 class="clients__tag">Alumni</h2>
+            </div>
+            <div class="clients__unit">
+              <img src="images/client-03.png" class="clients__logo img-responsive">
+              <h2 class="clients__tag">AWS Advance Technology Partner</h2>
+            </div>
+          </div>
         </div>
-    </div>
-    
-</div>
-
-<div class="container-fluid">
-   <div class="row text-center" id="features">
-        <div class="nw-title">
-            AWS Management Made Easy!
+      </div>
+    </section>
+    <!--START: Case Studies      -->
+    <section class="case-studies">
+      <div class="container">
+        <div class="case">
+          <h3 class="section-heading">case studies</h3>
+          <p class="case__info">Get insight into how we are saving upto 80% on AWS costs</p><a href="case-studies.html" class="read-more read-more--view">view all</a>
         </div>
+        <div class="row blog-card">
+          <div class="col-md-6 col-sm-6 blog-card__view">
+            <div class="card">
+              <div class="card__image">
+                <img src="images/case-studies/indieflix-casestudy.jpg" class="img-responsive">
+              </div>
+              <div class="card__content">
+                <h2 class="card__title">video transcoding</h2>
+                <p class="card__description-heading">How IndieFlix uses Batchly to transcode their VOD library 10x cheaper than other cloud transcoders.</p><a href="indieflix-casestudy.html" class="read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 blog-card__view">
+            <div class="card">
+              <div class="card__image">
+                <img src="images/case-studies/reliance-casestudy.jpg" class="img-responsive">
+              </div>
+              <div class="card__content">
+                <h2 class="card__title">pdf generation</h2>
+                <p class="card__description-heading">Batchly helps FinTech company to move to cloud with minimal effort.</p><a href="reliance-casestudy.html" class="read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--START: Clients -->
+    <section class="case-studies">
+      <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <span class="typcn typcn-weather-stormy typcn-batchly-big"></span>
-                <h3>AWS Infrastructure Management</h3>
-                <p>Automatically provisions AWS compute resources based on your job needs.</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <span class="typcn typcn-equals typcn-batchly-big"></span>
-                <h3>Instance Right Sizing</h3>
-                <p>Efficient utilization by choosing the right instance type for the right job.</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <span class="typcn typcn-chart-line typcn-batchly-big"></span>
-                <h3>Spot Bid Management</h3>
-                <p>Bids & Manages Amazon Spot instances for over 90% savings.</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <span class="typcn typcn-flow-merge typcn-batchly-big"></span>
-                <h3>Seamless Integration</h3>
-                <p>REST API, Prebuilt libraries to get started seamlessly.</p>
-            </div>
+          <h2 class="text-center section-heading">popular apps on batchly</h2>
+          <p class="case__info">To get you started instantly</p>
+          <ul class="client-list">
+            <li class="client-list__item">
+                <img src="images/application-img-01.png" alt="client-logo" class="img-responsive greyscale">
+
+            </li>
+            <li class="client-list__item">
+             
+                <img src="images/application-img-02.png" alt="client-logo" class="img-responsive greyscale">
+             
+            </li>
+            <li class="client-list__item">
+             
+                <img src="images/application-img-03.png" alt="client-logo" class="img-responsive greyscale">
+              
+            </li>
+            <li class="client-list__item">
+              
+                <img src="images/application-img-04.png" alt="client-logo" class="img-responsive greyscale">
+              
+            </li>
+            <li class="client-list__item">
+              
+                <img src="images/application-img-05.png" alt="client-logo" class="img-responsive greyscale">
+              
+            </li>
+            <li class="client-list__item">
+              
+                <img src="images/big-data-app-img1.png" alt="client-logo" class="img-responsive greyscale">
+              
+            </li>  
+            <li class="client-list__item">
+              
+                <img src="images/big-data-app-img4.png" alt="client-logo" class="img-responsive greyscale">
+              
+            </li>  
+          </ul>
         </div>
-        <div class="row">
-            <h3>Other Features</h3>
-            <p>Security. Runs inside your AWS account</p>
-            <p>Comprehensive Reporting</p>
-            <p>User Role Management</p>
-            <p>Notification & Logging</p>
-        </div>
-    </div>
-</div>
+      </div>
+    </section>   
+  </main>
+  <div id="footer"></div>
+  <!--START: Scripts-->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/functions.js"></script>
+  <div id="signup"></div>
+</body>
 
-<div class="container-fluid" style="background-color: #FBFBFB; padding:10px;">
-    <div class="row text-center">
-       <h3>Prebuilt apps to get you started instantly!</h3>
-       <img src="/img/batchly-prebuiltapps-transparent.png" class="img-responsive center-block" />
-       <br>
-        <a href="https://join.batchly.net" role="button" class="btn btn-lg btn-warning" style="background-color:#ff6600;color: #fff;">START FREE TRIAL</a>
-    </div>
-</div>
-
-<div id="footer">
-
-</div>
-</body>    
 </html>

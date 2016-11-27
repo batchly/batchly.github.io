@@ -2,87 +2,119 @@
 <html>
 
 <head>
+    <title>Batchly - Pig on Elastic MapReduce Case Study</title>
+    <link href="css/main.css" rel="styleSheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <script src="js/modernizr.min.js"></script>
+    <script src="/js/jquery.js"></script>
 
-    <title>Pig on Elastic MapReduce Casestudy | Batchly</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-           <!-- Favicon Zone -->
-    <link rel="icon" href="favicon.ico" />
-           <!-- Style & bootstrap import -->
-    <!-- Style & bootstrap import -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel='stylesheet' href='/css/typicons.min.css' />
-    <script src="/js/jquery-1.11.3.js"></script>
     <script>
-    $(function(){
-        $("#header").load("/header.html");
-        $("#footer").load("/footer.html");
-        
-    });
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#signup").load("signup-modal.html");
+
+        });
     </script>
     <!-- Google Analytics Code -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-55273566-1', 'auto');
-      ga('send', 'pageview');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-55273566-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </head>
 
 <body>
-<div id="header"></div>
-
-<div class="container-fluid" style="position:relative;">
-    <div class="row">
-        <div class="small-header">
-            <div class="col-md-8 col-md-offset-2">
-                <h1><strong>Pig on EMR Case Study:</strong> Flight Delay Impact Analysis using Pig on EMR is 79% cheaper in Batchly</h1>
+    <!--START: Header-->
+    <div id="header"></div>
+    <!--START : Main      -->
+    <main>
+        <!--START: Banner-->
+        <section class="app-server-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="app-server-banner__heading">Case Study: Pig on Elastic MapReduce</h2>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <h2>Flight Delay Analysis</h2>
-                <p>Flight delays is a challenging problem for all airline companies and may lead to financial losses and negative impact on their brand and business reputation. Every year approximately 20% of airline flights are delayed or cancelled, resulting in significant costs to both travellers and airlines. The annual cost of delays in 2007 for US carriers was estimated to be $31 billion.</p>
-            </div>
-            <div class="row">
-                <h2>The Challenge</h2>
-                <p>The Flight delay impact analysis was performed using Apache Pig. Pig,  a high level scripting language used with Apache Hadoop, enables data workers to write complex data transformations. 
-				<br><br>Amazon EMR provides a managed service to run Hadoop clusters. However, the idea was to make this processing extremely cost efficient and repeatable with little to no IT overhead.</p>
-            </div>
-            <div class="row">
-                <img src="/img/pig-dashboard.png" class="img-responsive">
-            </div>
-            
-            <div class="row">
-                <h2>Solution</h2>
-                <p>The EMR cluster was initially configured in Amazon EMR management console. This cluster information was then used in Batch.ly, a solution at fully automates AWS infrastructure (including spot instances) provisioning and management, to configure a Pig job. 
-				<br><br>The  airline dataset was loaded from S3 onto HDFS in EMR and Pig scripts were  scheduled to run through Batchly to compute parameters related to flight delays. Batchly also provided autoscaling option for quick turnaround time on ad-hoc reporting. Overall, with 94.5% of the instances running on Spot, Batchly helped save 79% over on-demand AWS costs with no IT overhead.</p>
-            </div>
-            <div class="row">
-                <p><a href="files/Batchly-Pig-Flight-Analysis-Case-Study.pdf" target="_blank">Download Case Study</a></p>
-            </div>
-        </div>
-    </div>
-    
-</div>
-<div class="container-fluid" style="background-color:#FBFBFB; padding:10px;">
-    <div class="row text-center">
-       <h3>Sign up for a 14 day free trial</h3>
-       <a href="https://join.batchly.net" role="button" class="btn btn-lg btn-warning" style="background-color:#ff6600;color: #fff;">START FREE TRIAL</a>
-    </div>
-</div>
-<div id="footer"></div>
+        </section>
+        <section class="batchly-blog-details-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 lists-of-blog-details">
+                        <h1 class="blog-details-heading">Flight Delay Impact Analysis using Pig on EMR is 79% cheaper in Batchly</h1>
+                        <div class="blog-description">
+                            <h2 class="blog-description__heading">Flight Delay Analysis</h2>
+                            <p class="blog-description__info">Flight delays is a challenging problem for all airline companies and may lead to financial losses and negative impact on their brand and business reputation. Every year approximately 20% of airline flights are delayed or cancelled, resulting in significant costs to both travellers and airlines. The annual cost of delays in 2007 for US carriers was estimated to be $31 billion.</p>
+                        </div>
+                        <div class="blog-description">
+                            <h2 class="blog-description__heading">The Challenge</h2>
+                            <p class="blog-description__info">
+                               The Flight delay impact analysis was performed using Apache Pig. Pig, a high level scripting language used with Apache Hadoop, enables data workers to write complex data transformations. <br><br>
+                                Amazon EMR provides a managed service to run Hadoop clusters. However, the idea was to make this processing extremely cost efficient and repeatable with little to no IT overhead.
+                            </p>
+                            <div class="blog-description__image">
+                                <img src="images/case-studies/pig-dashboard.png" alt="blog-img" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="blog-description">
+                            <h2 class="blog-description__heading">Solution</h2>
+                            
+                            <p class="blog-description__info">
+                                The EMR cluster was initially configured in Amazon EMR management console. This cluster information was then used in Batch.ly, a solution at fully automates AWS infrastructure (including spot instances) provisioning and management, to configure a Pig job.<br><br>
+                                The airline dataset was loaded from S3 onto HDFS in EMR and Pig scripts were scheduled to run through Batchly to compute parameters related to flight delays. Batchly also provided autoscaling option for quick turnaround time on ad-hoc reporting. Overall, with 94.5% of the instances running on Spot, Batchly helped save 79% over on-demand AWS costs with no IT overhead.
+                            </p>
+                        </div>
+                        
+                        <div class="blog-description">
+                            <h2 class="blog-description__heading"><a href="files/Batchly-Pig-Flight-Analysis-Case-Study.pdf">Download Case Study</a></h2>
+                        </div>
 
 
+                    </div>
+                    <div class="col-md-3 blog-related-posts">
+                        <h2 class="blog-post-heading">Case Studies</h2>
+                        <ul id="related-posts-list-slider" class="related-posts-list-slider">
+                            <li class="related-posts-list-item">
+                                <h2 class="related-posts-list-item__heading">Video Transcoding</h2><a href="indieflix-casestudy.html" class="related-posts-list-item__link">read</a>
+                            </li>
+                            <li class="related-posts-list-item">
+                                <h2 class="related-posts-list-item__heading">Big Data Processing on Hive</h2><a href="hive-hadoop-casestudy.html" class="related-posts-list-item__link">read</a>
+                            </li>
+                            <li class="related-posts-list-item">
+                                <h2 class="related-posts-list-item__heading">Stream Processing</h2><a href="log-spark-casestudy.html" class="related-posts-list-item__link">read</a>
+                            </li>
+                            <li class="related-posts-list-item">
+                                <h2 class="related-posts-list-item__heading">PDF Generation</h2><a href="reliance-casestudy.html" class="related-posts-list-item__link">read</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--START: Footer     -->
+    <div id="footer"></div>
+    <!--START: Scripts-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/functions.js"></script>
+    <div id="signup"></div>
 </body>
-    
+
 </html>
