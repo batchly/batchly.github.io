@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Batchly Schedule Demo</title>
+  <link href="css/main.css" rel="styleSheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/modernizr.min.js"></script>
+    <script src="/js/jquery.js"></script>
+
+    <script>
+    $(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#signup").load("signup-modal.html");
+
+    });
+    </script>
+    <!-- Google Analytics Code -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55273566-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+  <!--START: Header-->
+  <div id="header"></div>
+  <main>
+    <!--START: Pricing -->
+    <section class="pricing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 batchly-banner-block">
+            <h1 class="pricing__heading">Schedule Live Demo with Jags</h1>
+            <p class="pricing__info">Take a tour, ask questions and understand how Batchly can make a difference to your AWS environment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <div align="center" style="height:100%;margin:auto;">
+        <div id ="SOIDIV_batchly-AWS"></div>
+    </div>
+    <br>
+      
+    <script type="text/javascript">if (window.attachEvent) { window.attachEvent('onload', loadSoeJs); } else { if (window.onload){  if (typeof isSeoFunctionLoaded == 'undefined') {isSeoFunctionLoaded = false;}if(!isSeoFunctionLoaded){var curronload = window.onload; var newonload = function (evt) { curronload(evt); loadSoeJs(evt); }; window.onload = newonload; isSeoFunctionLoaded = true;}} else { window.onload = loadSoeJs; }}function loadSoeJs() { var head = document.getElementsByTagName('head').item(0); var js = document.createElement('script'); js.setAttribute('type', 'text/javascript'); js.setAttribute('src', '//static.scheduleonce.com/mergedjs/ScheduleOnceEmbed.js'); js.setAttribute('defer', 'true'); js.async = true; head.appendChild(js); }</script><script type="text/javascript">(function(){function SOEScriptLoaded(){ if(typeof soe != 'undefined') { soe.AddEventListners("//secure.scheduleonce.com/batchly-AWS?thm=blue&dt=&em=1","batchly-AWS","635px","100% !important","false"); } else { setTimeout(SOEScriptLoaded,500); } } setTimeout(SOEScriptLoaded,500)})()</script>
+    
+  </main>
+  <!--START: Footer     -->
+  <div id="footer"></div>
+  <!--START: Scripts-->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/functions.js"></script>
+  <div id="signup"></div>
+</body>
+
+</html>
