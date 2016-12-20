@@ -323,8 +323,12 @@
 <p>Whether you are running your web apps on AWS (using Auto Scaling Group, ELB, Elastic BeanStalk or Custom AMI) or running EMR jobs or other solutions like JMeter load testing and video transcoding (using FFMPEG), you can benefit from Batchly and reduce your AWS costs significantly. </p>
 <p><strong>I’m a Cloudability customer. Is Batchly a similar solution?</strong></p>
 <p>No. Batchly is a solution that will execute cost savings by intelligent use of spot instances. Batchly can work in conjunction with Cloudability where you can track and analyze the performance of Batchly from your Cloudability dashboard. </p>
-<p><strong>I’m a Cloudability customer. How do I track the performance of Batchly?</strong></p>
-<p>Refer to our detailed blog post on this. </p>
+<!--
+**I’m a Cloudability customer. How do I track the performance of Batchly?**
+
+Refer to our detailed blog post on this. 
+-->
+
 <p><strong>I have purchased Reserved Instances. How useful will Batchly be for me?</strong></p>
 <p>Batchly has automatic support for RIs. If you have purchased RIs and have them available, Batchly would automatically start using them as the first choice. Batchly would start launching spot or on-demand instances only after a partial or full consumption of your RIs ensuring maximum value to your RI spend. </p>
 <p><strong>Do I need to add tags for Batchly?</strong></p>
@@ -341,8 +345,12 @@
 <p>Batchly is a SaaS solution that doesn’t require the installation of any components. Batchly creates an AWS Role Amazon Resource Name (ARN) that is completely transparent and works in your account to balance and tune workloads.<a href="http://www.batchly.net/support/user-guide/security-policy/">Click here</a> to see details.</p>
 <p><strong>How do you handle glitches and availability? How can I be sure that you will move the workload over? What happens when my spot instances get terminated?</strong></p>
 <p>Batchly uses an algorithm that tends to hold on to the instances it launches. In cases where the spot instances get terminated,  Batchly would automatically launch additional instances (in most cases pre-emptively launch instances before the termination) and keep your application running without any intervention from your end. </p>
-<p><strong>How do I use the SLA module on your app that would be used on my application if I have an app running in Beanstalk with a load balancer in front and auto scaling enabled for the app?</strong></p>
-<p>Batchly has pre-built app for Beanstalk in our app store. All you have to do is configure the app with information about your current Beanstalk info and Batchly would automatically start managing the app in the most optimized manner using Spot instances and OnDemand instances so that your application availability or uptime is compromised.</p>
+<!--
+**How do I use the SLA module on your app that would be used on my application if I have an app running in Beanstalk with a load balancer in front and auto scaling enabled for the app?**
+
+Batchly has pre-built app for Beanstalk in our app store. All you have to do is configure the app with information about your current Beanstalk info and Batchly would automatically start managing the app in the most optimized manner using Spot instances and OnDemand instances so that your application availability or uptime is compromised.
+-->
+
 <p><strong>Is there no way to define a more specific SLA? e.g. I need my app to have 99.99% uptime?</strong></p>
 <p>When you actually configure your app in Batchly, you can specify your distribution between On-demand and Spot instances. We use following three line defense strategy so that you can have guaranteed uptime:</p>
 <ol>
