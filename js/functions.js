@@ -1,16 +1,20 @@
 $(document).ready(function() {
-    togglMenu();
+    setupMenu();
     AOS.init();
 });
 
-function togglMenu() {
-    $('.mobile-menu').on('click', function() {
-        var current = $('.navigation,.mobile-menu__bars').hasClass('is-active');
+function toggleMenu(){
+    var current = $('.navigation,.mobile-menu__bars').hasClass('is-active');
         if (current) {
             $('.navigation, .mobile-menu__bars').removeClass('is-active');
         } else {
             $('.navigation,.mobile-menu__bars').addClass('is-active');
         }
+}
+
+function setupMenu() {
+    $('.mobile-menu, .mobile-menu__bars').on('click', function() {
+        toggleMenu();
     });
 }
 $(window).scroll(function() {
