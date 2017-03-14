@@ -13,7 +13,7 @@ function toggleMenu(){
 }
 
 function setupMenu() {
-    $('.mobile-menu, .mobile-menu__bars').on('click', function() {
+    $('body').delegate('.mobile-menu','click', function() {
         toggleMenu();
     });
 }
