@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Batchly Dynamic Compute Management</title>
+    <link href="css/main.css" rel="styleSheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/modernizr.min.js"></script>
+    <script src="/js/jquery.js"></script>
+
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#signup").load("signup-modal.html");
+
+        });
+    </script>
+    <!-- Google Analytics Code -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-55273566-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <!--START: Header-->
+    <div id="header"></div>
+    <main>
+        <section class="app-server-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 batchly-banner-block">
+                        <h2 class="batchly-banner-block__heading">Dynamic Compute Management</h2>
+                        <p class="batchly-banner-block__text" style="font-size:20px;">Dynamic, Automated and Frictionless - with a focus on Cloud Cost Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-app-server clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+            
+                        <h3 class="about-app-server__sub-heading" style="font-size:22px;">Batchly optimizes applications across 4 key parameters - cost, performance, time and availability.</h3>
+            <p class="about-app-server__text"></p>
+                    </div>
+                </div>
+                <div class="row about-app-server">
+                    <div class="col-md-5">
+                        <h2 class="steps-to-start-heading">1. Cost</h2>
+                        <h3 class="about-app-server__sub-heading" style="font-size:22px;">
+                             Dynamically manage instances across spot, RI and On-demand and move them across regions, availability zones and instance types based on dynamic market activities to keep the costs low.
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <img src="images/Cost.gif" class="img-responsive img-rounded">
+                    </div>
+                </div>
+                <div class="row about-app-server">
+                    <div class="col-md-7">
+                        <img src="images/performance.gif" class="img-responsive img-rounded">
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="steps-to-start-heading">2. Performance</h2>
+                        <h3 class="about-app-server__sub-heading" style="font-size:22px;">
+                             Automatically analyze application performance and identify the right instance types for the right application (instance right sizing).
+                        </h3>
+                    </div>
+                </div>
+                <div class="row about-app-server">
+                    
+                    <div class="col-md-5">
+                        <h2 class="steps-to-start-heading">3. Time</h2>
+                        <h3 class="about-app-server__sub-heading" style="font-size:22px;">
+                             Schedule to start and stop instances and applications based on tags and application characteristics.
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <img src="images/time.gif" class="img-responsive img-rounded">
+                    </div>
+                </div>
+                <div class="row about-app-server">
+                    <div class="col-md-7">
+                        <img src="images/availability.gif" class="img-responsive img-rounded">
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="steps-to-start-heading">4. Availability</h2>
+                        <h3 class="about-app-server__sub-heading" style="font-size:22px;"> 
+                             Automatically balance application workload across instance categories and types based on availability metrics and predicting potential risks of instances getting terminated.
+                        </h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!--START: Footer     -->
+    <div id="footer"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/case-studies-slider.js"></script>
+    <div id="signup"></div>
+</body>
+
+</html>
