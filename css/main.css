@@ -5019,8 +5019,8 @@ button.close {
 
 @font-face {
     font-family: FontAwesome;
-    src: url(../fonts/font-awesome/fontAwesome.eot);
-    src: url(../fonts/font-awesome/fontAwesome.eot) format("embedded-opentype"), url(../fonts/font-awesome/fontAwesome.woff2) format("woff2"), url(../fonts/font-awesome/fontAwesome.woff) format("woff"), url(../fonts/font-awesome/fontAwesome.ttf) format("truetype"), url(../fonts/font-awesome/fontAwesome.svg) format("svg");
+    src: url(../fonts/font-awesome/FontAwesome.eot);
+    src: url(../fonts/font-awesome/FontAwesome.eot) format("embedded-opentype"), url(../fonts/font-awesome/FontAwesome.woff2) format("woff2"), url(../fonts/font-awesome/FontAwesome.woff) format("woff"), url(../fonts/font-awesome/FontAwesome.ttf) format("truetype"), url(../fonts/font-awesome/FontAwesome.svg) format("svg");
     font-weight: 400;
     font-style: normal
 }
