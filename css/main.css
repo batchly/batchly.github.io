@@ -12216,3 +12216,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px
 }
+
+header .logo-nav-red {
+    display: none !important;
+}
+header.is-waterfall .logo-nav-red {
+     display: block!important;
+     width: 150px;
+    margin-top: 20px;
+ }
+
+header .logo-nav-white {
+     display: block!important;
+     width: 200px;
+     margin-top: 15px;
+ }
+
+
+ header.is-waterfall .logo-nav-white {
+     display: none!important;
+ }
